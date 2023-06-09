@@ -1,0 +1,35 @@
+{
+  "name": "r22n",
+  "version": "1.0.1",
+  "license": "MIT",
+  "description": "A zero-configuration language translation interface for react written in typescript.",
+  "author": "Chris <chris@incept.asia>",
+  "homepage": "https://cblanquera.github.io/cblanquera/r22n",
+  "bugs": "https://github.com/cblanquera/r22n/issues",
+  "repository": "cblanquera/r22n",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "npm run build:tsc && npm run build:files",
+    "build:tsc": "tsc",
+    "build:files": "cp ./README.md ./dist/ && cp ./package.json ./dist/ && cp ./LICENSE ./dist/",
+    "test": "jest"
+  },
+  "engines": {
+    "node": ">=16.20.0"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@jest/globals": "29.5.0",
+    "@types/node": "16.11.7",
+    "@types/react": "18.0.26",
+    "@types/react-dom": "18.0.10",
+    "jest": "29.5.0",
+    "ts-jest": "29.0.5",
+    "ts-node": "10.9.1",
+    "typescript": "5.0.4"
+  }
+}
