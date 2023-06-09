@@ -72,12 +72,16 @@ const Page = () => {
     <div>
       <h2>Inline Tranlation</h2>
       <p>{_('Hello World')}</p>
+
       <h2>Inline Tranlation with Variables</h2>
       <p>{_('%s User', role)}</p>
+      
       <h2>String Literal Translations</h2>
       <p>{t`Welcome ${name}`}</p>
+      
       <h2>Translate Component</h2>
       <Translate>You are <strong>22</strong> years old</Translate>
+      
       <h2>Translate Component with Variables</h2>
       <Translate values={[ 22 ]}>You are %s years old</Translate>
     </div>
@@ -118,19 +122,23 @@ const Page = () => {
     changeLanguage(language, languages[language]);
   };
   return (
-    <div className="p-4">
+    <div>
       <button onClick={() => change('english')}>
         Change to English
       </button>
       <button onClick={() => change('klingon')}>
         Change to Klingon
       </button>
+      
       <h2>Inline Tranlation</h2>
       <p>{_('Hello World')}</p>
+      
       <h2>Inline Tranlation with Variables</h2>
       <p>{_('%s User', role)}</p>
+      
       <h2>String Literal Translations</h2>
       <p>{t`Welcome ${name}`}</p>
+      
       <h2>Translate Component</h2>
       <Translate>You are <strong>22</strong> years old</Translate>
     </div>
