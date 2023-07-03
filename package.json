@@ -1,12 +1,12 @@
 {
   "name": "r22n",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "description": "A zero-configuration language translation interface for react written in typescript.",
   "author": "Chris <chris@incept.asia>",
-  "homepage": "https://cblanquera.github.io/cblanquera/r22n",
-  "bugs": "https://github.com/cblanquera/r22n/issues",
-  "repository": "cblanquera/r22n",
+  "homepage": "https://github.com/OSSPhilippines/r22n",
+  "bugs": "https://github.com/OSSPhilippines/r22n/issues",
+  "repository": "OSSPhilippines/r22n",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
