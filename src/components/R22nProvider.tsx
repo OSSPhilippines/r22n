@@ -1,3 +1,4 @@
+'use client';
 //types
 import type { Language, R22nProviderProps } from '../types';
 //hooks

@@ -1,3 +1,4 @@
+'use client';
 //types
 import type { ReactNode } from 'react';
 //hooks
