@@ -1,3 +1,4 @@
+'use client';
 //types
 import type { R22nContextProps } from './types';
 //helpers

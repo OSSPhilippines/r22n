@@ -1,3 +1,4 @@
+//types
 import type { Language, R22nProviderProps } from '../types';
 //hooks
 import { useState } from 'react';
