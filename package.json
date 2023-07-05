@@ -1,6 +1,6 @@
 {
   "name": "r22n",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "description": "A zero-configuration language translation interface for react written in typescript.",
   "author": "Chris <chris@incept.asia>",
