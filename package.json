@@ -1,49 +1,73 @@
 {
   "type":"module",
   "name": "r22n",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "license": "MIT",
   "description": "A zero-configuration language translation interface for react written in typescript.",
   "author": "Chris <chris@incept.asia>",
   "homepage": "https://github.com/OSSPhilippines/r22n",
   "bugs": "https://github.com/OSSPhilippines/r22n/issues",
   "repository": "OSSPhilippines/r22n",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./cjs/index.js",
+  "module": "./esm/index.js",
+  "types": "./cjs/index.d.ts",
   "exports": {
-    ".": "./dist/index.js",
-    "./R22nProvider": "./dist/components/R22nProvider.js",
-    "./Translate": "./dist/components/Translate.js",
-    "./useLanguage": "./dist/hooks/useLanguage.js",
-    "./context": "./dist/context.js",
-    "./types": "./dist/types.js"
+    ".": {
+      "require": "./cjs/index.js",
+      "import": "./esm/index.js"
+    },
+    "./R22nProvider": {
+      "require": "./cjs/components/R22nProvider.js",
+      "import": "./esm/components/R22nProvider.js"
+    },
+    "./Translate": {
+      "require": "./cjs/components/Translate.js",
+      "import": "./esm/components/Translate.js"
+    },
+    "./useLanguage": {
+      "require": "./cjs/hooks/useLanguage.js",
+      "import": "./esm/hooks/useLanguage.js"
+    },
+    "./context": {
+      "require": "./cjs/context.js",
+      "import": "./esm/context.js"
+    },
+    "./types": {
+      "require": "./cjs/types.js",
+      "import": "./esm/types.js"
+    }
   },
   "typesVersions": {
     "*": {
-      "index": [ "./dist/index.d.ts"],
-      "R22nProvider": [ "./dist/components/R22nProvider.d.ts" ],
-      "Translate": [ "./dist/components/Translate.d.ts" ],
-      "useLanguage": [ "./dist/hooks/useLanguage.d.ts" ],
-      "context": [ "./dist/context.d.ts" ]
+      "index": [ "./cjs/index.d.ts" ],
+      "R22nProvider": [ "./cjs/components/R22nProvider.d.ts" ],
+      "Translate": [ "./cjs/components/Translate.d.ts" ],
+      "useLanguage": [ "./cjs/hooks/useLanguage.d.ts" ],
+      "context": [ "./cjs/context.d.ts" ]
     }
   },
+  "files": [
+    "cjs",
+    "esm",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
-    "build": "npm run build:tsc && npm run build:files",
-    "build:tsc": "tsc",
-    "build:files": "cp ./README.md ./dist/ && cp ./package.json ./dist/ && cp ./LICENSE ./dist/",
-    "test": "jest"
+    "build": "yarn build:tsc && yarn build:pkg",
+    "build:pkg": "yarn build:pkg:cjs && yarn build:pkg:esm",
+    "build:pkg:cjs": "echo '{\"type\": \"commonjs\"}' > cjs/package.json",
+    "build:pkg:esm": "echo '{\"type\": \"module\"}' > esm/package.json",
+    "build:tsc": "yarn build:tsc:cjs && yarn build:tsc:esm",
+    "build:tsc:cjs": "tsc -p ./tsconfig.cjs.json",
+    "build:tsc:esm": "tsc -p ./tsconfig.esm.json"
   },
   "devDependencies": {
-    "@jest/globals": "29.7.0",
-    "@types/node": "22.13.13",
-    "@types/react": "19.0.12",
-    "@types/react-dom": "19.0.4",
-    "jest": "29.7.0",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
-    "ts-jest": "29.1.2",
+    "@types/node": "22.9.3",
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
     "ts-node": "10.9.2",
-    "typescript": "5.4.5"
+    "typescript": "5.7.2"
   }
 }
