@@ -1,7 +1,7 @@
 {
   "type":"module",
   "name": "r22n",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "license": "MIT",
   "description": "A zero-configuration language translation interface for react written in typescript.",
   "author": "Chris <chris@incept.asia>",
