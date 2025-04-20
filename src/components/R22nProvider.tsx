@@ -1,10 +1,10 @@
 'use client';
 //types
-import type { Language, R22nProviderProps } from '../types';
+import type { Language, R22nProviderProps } from '../types.js';
 //hooks
 import { useState } from 'react';
 //context
-import R22nContext from '../context';
+import R22nContext from '../context.js';
 
 /**
  * The i18n provider (this is what to put in app.tsx)

@@ -3,9 +3,9 @@
 import type { ReactNode } from 'react';
 //hooks
 import React, { useContext } from 'react';
-import useLanguage from '../hooks/useLanguage';
+import useLanguage from '../hooks/useLanguage.js';
 //components
-import R22nContext from '../context';
+import R22nContext from '../context.js';
 
 const Translate: React.FC<{
   values?: ReactNode|ReactNode[]

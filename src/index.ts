@@ -1,9 +1,9 @@
 'use client';
 
-import R22nContext from './context';
-import R22nProvider from './components/R22nProvider';
-import Translate from './components/Translate';
-import useLanguage from './hooks/useLanguage';
+import R22nContext from './context.js';
+import R22nProvider from './components/R22nProvider.js';
+import Translate from './components/Translate.js';
+import useLanguage from './hooks/useLanguage.js';
 
 export { 
   R22nContext, 

@@ -4,7 +4,7 @@ import type { ReactNode } from 'react';
 //hooks
 import { useContext } from 'react';
 //components
-import R22nContext from '../context';
+import R22nContext from '../context.js';
 
 export default function useLanguage() {
   const { 

@@ -1,6 +1,6 @@
 'use client';
 //types
-import type { R22nContextProps } from './types';
+import type { R22nContextProps } from './types.js';
 //helpers
 import React from 'react';
 
